@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  background-size: cover;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 0;
+  animation: fadeInUp 1s ease-out;
+  color: #fff;
+}
+
+.year {
+  font-size: 12rem;
+  opacity: 0.5;
+  position: absolute;
+  bottom: 20px;
+  color: rgba(255, 255, 255, 0.934);
+  animation: fadeInUp 1s ease-out 0.5s;
+}
+
+.countdown {
+  display: none;
+  margin-top: 20px;
+  transform: scale(1);
+  animation: fadeInUp 1s ease-out 1s;
+}
+
+.time {
+  display: inline-block;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, background 0.3s;
+  animation: pulse 2s infinite;
+}
+
+.time h2 {
+  margin: 0;
+  font-size: 6rem;
+  color: #f39c12;
+}
+
+.time small {
+  font-size: 1.5rem;
+  color: #ecf0f1;
+}
+
+.time:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.loading img {
+  width: 80px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  .year {
+    font-size: 8rem;
+  }
+
+  .time {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .time h2 {
+    font-size: 4rem;
+  }
+
+  .time small {
+    font-size: 1rem;
+  }
+}
