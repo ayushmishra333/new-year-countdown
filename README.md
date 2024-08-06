@@ -2,7 +2,10 @@
 
 A festive New Year Countdown timer web application that counts down to the next New Year’s Day with a vibrant and engaging design.
 
-<div align="center">![new-year-countdown](https://github.com/user-attachments/assets/0d4ad469-1d21-4771-ad8a-8f64b5316ae3)</div>
+
+![new-year-countdown](https://github.com/user-attachments/assets/0d4ad469-1d21-4771-ad8a-8f64b5316ae3)
+
+
 
 ## Features
 
